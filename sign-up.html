@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="position-relative">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css">
+
+</head>
+<body class="bg-body-secondary pt-5">
+    <div class="container bg-body-tertiary w-75">
+        <div class="box p-5 ">
+            <h1 class="text-center text-capitalize mb-4">login system</h1>
+            <h2 class="text-center text-capitalize"> sign up </h2>
+
+            <form class="mb-3 position-relative" >
+                <div class="">
+                    <input
+                    type="text"
+                    name="name"
+                    id="upname"
+                    class="form-control "
+                    placeholder="Enter your name"
+                    aria-describedby="helpId"
+                />
+                <small id="helpname" class="text-danger opacity-0 form-text   ">name must be 3 chracter minimum</small>
+                </div>
+                
+                <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="upemail"
+                aria-describedby="emailHelp"
+                placeholder="Enter your E-mail"
+                />
+                <small id="helpemail" class="form-text text-danger opacity-0">please enter valid Email</small>
+
+                <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="uppassword"
+                placeholder="Enter your password"
+                aria-describedby="passwordHelp"
+                autocomplete="off"
+                />
+                <small id="helppassword" class="form-text text-danger opacity-0">password must conatin number and minimum length is 5</small>
+
+                <div class="text-end m-0 position-absolute eye "><i id="eye" class="fa-solid fa-eye "></i></div>
+
+                <a
+                type="button"
+                class="btn btn-outline-primary d-block w-100 mt-3"
+                id="upbutton"
+                >
+                Sign up
+                </a>
+                
+                
+            </form>
+
+            <div class="text-center fw-bolder">
+            <small >alerdy have an account  ? <a href="./index.html" >Sign in</a></small>
+            </div> 
+        </div>  
+    </div>  
+      <script src="./js/bootstrap.bundle.min.js"></script> 
+      <script src="./js/signup.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js"></script>
+
+</body>
+</html>
