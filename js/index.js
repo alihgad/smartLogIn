@@ -7,6 +7,17 @@ var inemail = document.querySelector("#inemail"),
 
     
     inbutton.addEventListener("click",function(e){
+        logIn()
+    })
+
+    document.addEventListener("keyup",function(e){
+        if(e.key=="Enter"){
+            logIn() 
+        }
+    })
+
+
+    function logIn(){
         if (users){
             var loginStatus = false
             for(let i =0 ; i<users.length; i++){
@@ -43,11 +54,7 @@ var inemail = document.querySelector("#inemail"),
                 footer : '<p class="fs-6 text-capitalize fe-bold">please <a class="text-decoration-none" href="sign-up.html">signup</a> first</p>'
               });
         }
-
-
-
-        
-    })
+    }
 
     eye.addEventListener("click",function(){
         inpassword.toggleAttribute("type")
@@ -59,13 +66,7 @@ var inemail = document.querySelector("#inemail"),
     }
 
 
-    function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-      }
+
 
 
 

@@ -13,41 +13,55 @@ if (localStorage.getItem("users")) {
     }
 
 upbutton.addEventListener("click", function () {
+    signUp()
+
+})
+
+
+document.addEventListener("keyup", function (e) {
     
-    if (nameValidate() == true && emailValidate() == true && passwordValidate() == true ) {
-            if(newEmail() == true){
-            var user = {
-                name : upname.value,
-                email : upemail.value,
-                password : uppassword.value.toLowerCase() 
-            }
-            users.push(user)
-    
-            localStorage.setItem("users", JSON.stringify(users))
-            upbutton.setAttribute("href", "index.html")
-            }else{
-                Swal.fire({
-                    icon: "warning",
-                    title: "Email alerdy exist",
-                    confirmButtonText: `<a href = 'index.html' class="text-decoration-none text-white">Log in </a> `,
-                    showCloseButton: true,
-                    denyButtonText: `try another email`,
-                    showDenyButton: true,
-                    buttonStyling : false,
-                    customClass: {
-                        confirmButton: "btn btn-success",
-                        cancelButton: "btn btn-info"
-                    }
-                });
-            }
-        } else {
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Please check your data",
-        });
+    if(e.key=="Enter"){
+        signUp()
     }
 })
+
+
+
+function signUp(){
+    if (nameValidate() == true && emailValidate() == true && passwordValidate() == true ) {
+        if(newEmail() == true){
+        var user = {
+            name : upname.value,
+            email : upemail.value,
+            password : uppassword.value.toLowerCase() 
+        }
+        users.push(user)
+
+        localStorage.setItem("users", JSON.stringify(users))
+        upbutton.setAttribute("href", "index.html")
+        }else{
+            Swal.fire({
+                icon: "warning",
+                title: "Email alerdy exist",
+                confirmButtonText: `<a href = 'index.html' class="text-decoration-none text-white">Log in </a> `,
+                showCloseButton: true,
+                denyButtonText: `try another email`,
+                showDenyButton: true,
+                buttonStyling : false,
+                customClass: {
+                    confirmButton: "btn btn-success",
+                    cancelButton: "btn btn-info"
+                }
+            });
+        }
+    } else {
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please check your data",
+    });
+}
+}
 
 
 function nameValidate() {
