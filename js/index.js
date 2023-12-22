@@ -40,7 +40,7 @@ var inemail = document.querySelector("#inemail"),
                 icon: "error",
                 title: "Oops...",
                 text: 'theres no data',
-                footer : '<p class="fs-6 text-capitalize fe-bold">please <a class="text-decoration-none" href="signup.html">signup</a> first</p>'
+                footer : '<p class="fs-6 text-capitalize fe-bold">please <a class="text-decoration-none" href="sign-up.html">signup</a> first</p>'
               });
         }
 
