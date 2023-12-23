@@ -26,7 +26,7 @@ var inemail = document.querySelector("#inemail"),
                     if(inpassword.value.toLowerCase() == users[i].password){
                         localStorage.setItem("login",JSON.stringify(inemail.value))
                         inbutton.setAttribute("href","home.html")
-                        if( window.location.pathname == "smartLogIn/"){
+                        if( window.location.pathname == "/smartLogIn/"){
                         window.location.pathname = "smartLogIn/home.html"
                         }else{
                             window.location.pathname = "/home.html"
