@@ -40,9 +40,9 @@ function signUp(){
         localStorage.setItem("users", JSON.stringify(users))
         upbutton.setAttribute("href", "index.html")
         if( window.location.pathname == "/smartLogIn/sign-up.html"){
-            window.location.pathname = "smartLogIn/home.html"
+            window.location.pathname = "/smartLogIn/"
             }else{
-                window.location.pathname = "/home.html"
+                window.location.pathname = "/index.html"
             } 
         }else{
             Swal.fire({
