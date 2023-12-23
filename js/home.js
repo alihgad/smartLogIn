@@ -6,7 +6,7 @@ signout =  document.querySelector("#signout")
 var found = false
 for(let i=0;i<users.length;i++){
     if(login == users[i].email){
-        box.innerHTML = `Welcome , ${users[i].name.toUpperCase()}`
+        box.innerHTML = `Welcome , ${users[i].name}`
         found = true
     }
 }

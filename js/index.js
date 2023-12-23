@@ -26,7 +26,11 @@ var inemail = document.querySelector("#inemail"),
                     if(inpassword.value.toLowerCase() == users[i].password){
                         localStorage.setItem("login",JSON.stringify(inemail.value))
                         inbutton.setAttribute("href","home.html")
+                        if( window.location.pathname == "smartLogIn/index.html"){
                         window.location.pathname = "smartLogIn/home.html"
+                        }else{
+                            window.location.pathname = "/home.html"
+                        }     
                     }else{
                         Swal.fire({
                             icon: "error",
