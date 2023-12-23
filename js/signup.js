@@ -39,6 +39,7 @@ function signUp(){
 
         localStorage.setItem("users", JSON.stringify(users))
         upbutton.setAttribute("href", "index.html")
+        window.location.pathname="/index.html"
         }else{
             Swal.fire({
                 icon: "warning",

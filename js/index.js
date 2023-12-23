@@ -25,7 +25,8 @@ var inemail = document.querySelector("#inemail"),
                     loginStatus = true
                     if(inpassword.value.toLowerCase() == users[i].password){
                         localStorage.setItem("login",JSON.stringify(inemail.value))
-                        e.target.setAttribute("href","home.html")
+                        inbutton.setAttribute("href","home.html")
+                        window.location.pathname = "/home.html"
                     }else{
                         Swal.fire({
                             icon: "error",
