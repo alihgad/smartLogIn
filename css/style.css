@@ -7,3 +7,15 @@
     top: 42%;
     right: -25px;
 }
+
+.w-100-mobile{
+    width: 30% !important;
+}
+
+@media screen and (max-width:776px){
+
+    .w-100-mobile{
+        width: 95% !important;
+    }
+    
+}
